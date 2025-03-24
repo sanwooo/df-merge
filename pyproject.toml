@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "merge"
+version = "0.1.0"
+description = ""
+authors = ["sanwooo <sanwoo@pku.edu.cn>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = {version = "^2.5.1+cu121", source = "pytorch"}
+transformers = "^4.48.1"
+datasets = "^3.2.0"
+numpy = "^2.2.2"
+pandas = "^2.2.3"
+accelerate = "^1.3.0"
+bayesian-optimization = "^2.0.3"
+matplotlib = "^3.10.0"
+seaborn = "^0.13.2"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
