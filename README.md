@@ -78,10 +78,10 @@ $seed = 42
 $acquisition_fn = ei # [ei, ucb]
 $experiment_name = merge # any name for your experiment
 
-python src/df-merge.py --ckpt_root $ckpt_root --model_name_or_path $model_name_or_path --seed $seed --acquisition_fn $acquisition_fn --experiment_name $experiment_name 
+python src/df-merge.py --ckpt_root $ckpt_root --model_name_or_path $model_name_or_path --seed $seed --acquisition_fn $acquisition_fn --experiment_name $experiment_name --use_fisher
 ```
 > [!NOTE]
-> Please make sure that `$ckpt_root`, `$model_name_or_path` and `$seed` match the checkpoint saved by running `src/finetune.py`.
+> Please make sure that `$ckpt_root`, `$model_name_or_path` and `$seed` match the checkpoint path saved by `src/finetune.py`.
 
 This will save the evaluation result (the merged model is not saved) at directory `experiments/df-merge/$experiment_name/metrics/$model_name_or_path/$acquisition_fn/use_fisher_True/seed$seed.`
 
