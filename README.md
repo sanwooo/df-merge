@@ -44,12 +44,14 @@ cd ../
 The module [src/finetune.py](src/finetune.py) trains t5-base/t5-large model on single task or mixture of all tasks.
 To train on a single task, run:
 ```sh
-$dataset = paws # [paws, qasc, quartz, story_cloze, wiki_qa, winogrande] 
 $model_name_or_path = t5-base # [t5-base, t5-large]
 $config_path = ./configs/t5-single-task.yaml
 $experiment_name = default #any name for your experiment
 $seed = 42
-python src/finetune.py --dataset $dataset --model_name_or_path $model_name_or_path --config_path $config_path --experiment_name $experiment_name --seed $seed 
+for $dataset in paws qasc quartz story_cloze wiki_qa winogrande
+    do
+    python src/finetune.py --dataset $dataset --model_name_or_path $model_name_or_path --config_path $config_path --experiment_name $experiment_name --seed $seed
+done
 ```
 This will save model checkpoint at directory `./experiments/finetune/$experiment_name/ckpt/$model_name_or_path/$dataset/seed$seed/`.
 
@@ -78,8 +80,8 @@ $experiment_name = merge # any name for your experiment
 
 python src/df-merge.py --ckpt_root $ckpt_root --model_name_or_path $model_name_or_path --seed $seed --acquisition_fn $acquisition_fn --experiment_name $experiment_name 
 ```
-> [!IMPORTANT]
-> Please make sure that `$ckpt_root`, `$model_name_or_path`, `$seed` and `$experiment_name used for src/finetune.py`(`train` in this example)  match the checkpoint saved by running `src/finetune.py`.
+> [!NOTE]
+> Please make sure that `$ckpt_root`, `$model_name_or_path` and `$seed` match the checkpoint saved by running `src/finetune.py`.
 
 This will save the evaluation result (the merged model is not saved) at directory `experiments/df-merge/$experiment_name/metrics/$model_name_or_path/$acquisition_fn/use_fisher_True/seed$seed.`
 
