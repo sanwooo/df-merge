@@ -5,7 +5,7 @@ This is the code implementation to reproduce __DF-Merge__ of the NAACL 2025 pape
 
 ## Dependencies
 
-To run the code, please install all dependencies specified in `pyproject.toml` via poetry. Install [poetry](https://python-poetry.org/docs/) and run the following command.
+To run the code, please install [poetry](https://python-poetry.org/docs/) and install all dependencies specified in `pyproject.toml` using the following command
 ```
 poetry install
 poetry shell
@@ -21,7 +21,7 @@ import os
 from datasets import load_dataset
 
 root_path = ".dataset"
-for ds_stash in [("paws", "labeled_final"), ("qasc",), ("quartz",), ("story_cloze", "2016", "dataset"), ("wiki_qa",), ("winogrande", "winogrande_xl"))]:
+for ds_stash in [("paws", "labeled_final"), ("qasc",), ("quartz",), ("story_cloze", "2016", "dataset"), ("wiki_qa",), ("winogrande", "winogrande_xl")]:
     if ds_stash[0] == "story_cloze":
         ds = load_dataset(*ds_stash, data_dir=ds_stash[2], trust_remote_code=True)
     else:
