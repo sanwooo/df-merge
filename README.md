@@ -93,6 +93,16 @@ If you wish to evaluate the performance of each fine-tuned or multi-task model, 
 This codebase references the codebase below and we thank their efforts.
 ```bibtext
 @inproceedings{
+ilharco2023editing,
+title={Editing models with task arithmetic},
+author={Gabriel Ilharco and Marco Tulio Ribeiro and Mitchell Wortsman and Ludwig Schmidt and Hannaneh Hajishirzi and Ali Farhadi},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=6t0Kwf8-jrj}
+}
+```
+```bibtext
+@inproceedings{
       yadav2023tiesmerging,
       title={{TIES}-Merging: Resolving Interference When Merging Models},
       author={Prateek Yadav and Derek Tam and Leshem Choshen and Colin Raffel and Mohit Bansal},
@@ -101,6 +111,7 @@ This codebase references the codebase below and we thank their efforts.
       url={https://openreview.net/forum?id=xtaX3WyCj1}
 }
 ```
+
 
 
 
