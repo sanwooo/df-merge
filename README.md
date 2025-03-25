@@ -23,7 +23,7 @@ from datasets import load_dataset
 root_path = ".dataset"
 for ds_stash in [("paws", "labeled_final"), ("qasc",), ("quartz",), ("story_cloze", "2016", "dataset"), ("wiki_qa",), ("winogrande", "winogrande_xl")]:
     if ds_stash[0] == "story_cloze":
-        ds = load_dataset(*ds_stash, data_dir=ds_stash[2], trust_remote_code=True)
+        ds = load_dataset(*ds_stash[:2], data_dir=ds_stash[2], trust_remote_code=True)
     else:
         ds = load_dataset(*ds_stash, trust_remote_code=True)
     ds.save_to_disk(os.path.join(root_path, *ds_stash))
