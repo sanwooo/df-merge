@@ -1,7 +1,7 @@
 # Dynamic Fisher-weighted Model Merging via Bayesian Optimization
 
 This is the code implementation to reproduce __DF-Merge__ of the NAACL 2025 paper 
-"Dynamic Fisher-weighted Model Merging via Bayesian Optimization" by Sanwoo Lee, Jiahao Liu, Qifan Wang, Xunliang Cai and Yunfang Wu*.
+"Dynamic Fisher-weighted Model Merging via Bayesian Optimization" by Sanwoo Lee, Jiahao Liu, Qifan Wang, Jingang Wang, Xunliang Cai and Yunfang Wu*.
 
 ## Dependencies
 
@@ -81,7 +81,7 @@ python src/df-merge.py --ckpt_root $ckpt_root --model_name_or_path $model_name_o
 > [!IMPORTANT]
 > Please make sure that `$ckpt_root`, `$model_name_or_path`, `$seed` and `$experiment_name used for src/finetune.py`(`train` in this example)  match the checkpoint saved by running `src/finetune.py`.
 
-This will save the evaluation result (the merged model is not saved) under experiments/df-merge/$experiment_name/metrics/$model_name_or_path/$acquisition_fn/use_fisher_True/seed$seed.
+This will save the evaluation result (the merged model is not saved) at directory `experiments/df-merge/$experiment_name/metrics/$model_name_or_path/$acquisition_fn/use_fisher_True/seed$seed.`
 
 ## (optional) inference
 
