@@ -112,6 +112,31 @@ url={https://openreview.net/forum?id=6t0Kwf8-jrj}
 }
 ```
 
+## Reference
+If you find this repository helpful, please cite our paper.
+```bibtext
+@inproceedings{lee-etal-2025-dynamic,
+    title = "Dynamic Fisher-weighted Model Merging via {B}ayesian Optimization",
+    author = "Lee, Sanwoo  and
+      Liu, Jiahao  and
+      Wang, Qifan  and
+      Wang, Jingang  and
+      Cai, Xunliang  and
+      Wu, Yunfang",
+    editor = "Chiruzzo, Luis  and
+      Ritter, Alan  and
+      Wang, Lu",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-long.254/",
+    pages = "4923--4935",
+    ISBN = "979-8-89176-189-6"
+}
+```
+
 
 
 
